@@ -1,27 +1,80 @@
 # Kiyo Cloud
 
-Kiyo Cloud is a premium, dark landing page for simple web hosting and domain services.
+Kiyo Cloud is a hosting and domain management platform built as a connected product ecosystem.
 
-## Current offer
+It combines a public-facing website for discovering hosting services, pricing and domain products with an authenticated customer application for managing services, billing, orders, support and account settings.
 
-- Web Hosting
+## Live Platform
+
+https://kiyocloud.com/
+
+## Product Structure
+
+Kiyo is designed as two connected parts of one platform:
+
+### Public Website
+
+The public-facing experience is focused on:
+
+- Web hosting services
+- Domain registration
+- Domain search
+- Domain transfers
+- Pricing and product discovery
+- Customer support access
+- User authentication
+
+### Customer Application
+
+Authenticated users access a connected dashboard for managing:
+
+- Hosting services
 - Domains
-- Domain Transfer
+- Orders
+- Billing
+- Support
+- Account settings
+- Service-related actions
 
-The project uses Next.js and keeps the original landing-page layout, responsive behaviour, transitions, gradients, and animated elements.
+The public website and customer application share the same product identity, session flow and backend ecosystem.
 
-## Local development
+## Engineering Focus
+
+Kiyo is designed as more than a marketing website.
+
+The project focuses on building a complete service platform with:
+
+- Connected public and authenticated experiences
+- Customer account flows
+- Hosting and domain management
+- Backend integrations
+- Secure authentication
+- Service-oriented architecture
+- Responsive user interfaces
+- Scalable product structure
+
+## Technology
+
+- Next.js
+- React
+- TypeScript
+- Node.js
+- Modern API integrations
+- Cloud deployment
+
+## Design
+
+Kiyo uses a dark, modern visual identity built around:
+
+- Deep navy and near-black backgrounds
+- Minimal cyan and blue accents
+- Clear information hierarchy
+- Responsive layouts
+- Consistent branding across the public website and customer dashboard
+
+## Development
+
+Install dependencies:
 
 ```bash
 npm install
-npm run dev
-```
-
-Open `http://localhost:3000` in your browser.
-
-## Production build
-
-```bash
-npm run build
-npm start
-```
