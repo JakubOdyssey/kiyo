@@ -1,0 +1,93 @@
+.footer {
+  background-color: var(--kiyo-bg-footer);
+  box-shadow: 0 -2px 0.5rem var(--kiyo-shadow-strong);
+  color: var(--kiyo-text-muted);
+}
+.footer a {
+  color: var(--kiyo-text-secondary);
+}
+.footer a:hover {
+  color: var(--kiyo-brand-hover);
+}
+/* Footer main */
+.footer-main-container {
+  display: flex;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer-main-block {
+  flex: 1 0 260px;
+}
+.footer-main-block p:last-of-type {
+  margin: 0;
+}
+.footer-main-block-title {
+  color: var(--kiyo-text-primary);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: var(--font-weight-normal);
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, var(--kiyo-border-brand), var(--kiyo-border-subtle), transparent) 1;
+}
+.footer-main-block li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.footer-main-block li:last-child {
+  border-bottom: 0;
+}
+
+.footer-main-block a,
+.footer-bottom-block a,
+.footer-cookie-preferences {
+  color: var(--kiyo-text-secondary);
+  text-decoration: none;
+  background: linear-gradient(to right, var(--kiyo-brand-hover), var(--kiyo-brand-hover)) no-repeat left bottom;
+  background-size: 0% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-size 0.4s ease, color 0.4s ease;
+}
+
+.footer-main-block a:hover,
+.footer-bottom-block a:hover,
+.footer-cookie-preferences:hover {
+  color: transparent;
+  background-size: 100% 100%;
+}
+
+.footer-cookie-preferences {
+  padding: 0;
+  font: inherit;
+}
+
+.footer .line-gradient {
+  background: linear-gradient(to right, transparent, var(--kiyo-border-brand), var(--kiyo-border-soft), transparent);
+}
+
+.footer .social-link a {
+  background-color: var(--kiyo-surface);
+  color: var(--kiyo-text-secondary);
+}
+
+.footer .social-link a:hover {
+  background-color: var(--kiyo-brand);
+  color: var(--kiyo-text-on-brand);
+}
+
+/* Footer Bottom */
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+}
+
+.footer-bottom-block {
+  color: var(--kiyo-text-muted);
+}

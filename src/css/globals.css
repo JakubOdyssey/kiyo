@@ -1,0 +1,139 @@
+:root {
+  /* Kiyo semantic colour system */
+  --kiyo-bg-deep: #07101b;
+  --kiyo-bg-primary: #0a1421;
+  --kiyo-bg-secondary: #0e1928;
+  --kiyo-bg-elevated: #132033;
+  --kiyo-bg-footer: #050c15;
+
+  --kiyo-surface: #101c2c;
+  --kiyo-surface-hover: #152438;
+  --kiyo-surface-strong: #18283d;
+  --kiyo-surface-translucent: rgba(16, 28, 44, 0.82);
+
+  --kiyo-text-primary: #f2f5f6;
+  --kiyo-text-secondary: #b4bec9;
+  --kiyo-text-muted: #8d9aa8;
+  --kiyo-text-subtle: #748393;
+  --kiyo-text-on-brand: #061418;
+
+  --kiyo-brand: #55b8c0;
+  --kiyo-brand-hover: #78cbd1;
+  --kiyo-brand-strong: #2a8791;
+  --kiyo-accent-blue: #4d8198;
+  --kiyo-accent-blue-soft: #b4dbe5;
+  --kiyo-accent-magenta: #e79aba;
+  --kiyo-accent-magenta-soft: #e6b4c8;
+
+  --kiyo-border-soft: rgba(180, 219, 229, 0.12);
+  --kiyo-border-subtle: rgba(180, 219, 229, 0.08);
+  --kiyo-border-strong: rgba(180, 219, 229, 0.18);
+  --kiyo-border-brand: rgba(85, 184, 192, 0.42);
+
+  --kiyo-success: #69c79d;
+  --kiyo-warning: #e3b765;
+  --kiyo-error: #ed8798;
+  --kiyo-glow-teal: rgba(85, 184, 192, 0.12);
+  --kiyo-glow-teal-soft: rgba(85, 184, 192, 0.055);
+  --kiyo-glow-teal-ambient: rgba(85, 184, 192, 0.095);
+  --kiyo-glow-magenta: rgba(231, 154, 186, 0.1);
+  --kiyo-glow-magenta-soft: rgba(231, 154, 186, 0.035);
+  --kiyo-shadow-card: rgba(0, 0, 0, 0.1);
+  --kiyo-shadow-soft: rgba(0, 0, 0, 0.2);
+  --kiyo-shadow-strong: rgba(0, 0, 0, 0.36);
+  --kiyo-shadow-brand: rgba(85, 184, 192, 0.16);
+  --kiyo-decoration-muted: rgba(135, 148, 163, 0.35);
+
+  /* Compatibility aliases used by the existing Darki component layer */
+  --bg-body: var(--kiyo-bg-deep);
+  --color-text: var(--kiyo-text-secondary);
+  --color-text-light: var(--kiyo-text-muted);
+  --color-primary: var(--kiyo-brand);
+  --color-primary-dark: var(--kiyo-brand-strong);
+  --color-primary-light: var(--kiyo-brand-hover);
+  --color-secondary: var(--kiyo-accent-blue);
+  --color-secondary-dark: #234b61;
+  --color-secondary-light: var(--kiyo-accent-blue-soft);
+  --color-dark: var(--kiyo-bg-deep);
+  --color-dark2: var(--kiyo-bg-elevated);
+  --color-border: var(--kiyo-border-soft);
+  --color-white: var(--kiyo-text-primary);
+  --color-white-soft: var(--kiyo-text-primary);
+  --color-gray: var(--kiyo-text-muted);
+  --color-gray-light: var(--kiyo-text-secondary);
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  --font-text: "Manrope";
+  --font-heading: "Manrope", sans-serif;
+}
+/* manrope-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/manrope-regular.woff2') format('woff2');
+}
+/* manrope-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/manrope-bold.woff2') format('woff2');
+}
+html {
+  color-scheme: dark;
+}
+body {
+  background-color: var(--bg-body);
+  background-image: radial-gradient(circle at 82% 10%, var(--kiyo-glow-teal), transparent 30%);
+  color: var(--color-text);
+  font-family: var(--font-text), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: var(--font-weight-normal);
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--kiyo-text-primary);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);       /* 32px → 56px */
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);   /* 28px → 44px */
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);    /* 24px → 36px */
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px → 28px */
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: clamp(1.1rem, 2vw, 1.375rem);   /* 17px → 22px */
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: 1.125rem;  /* 18px — close to body, no clamp needed */
+  line-height: 1.4;
+}
+strong {
+  color: var(--kiyo-text-primary);
+  font-weight: var(--font-weight-bold);
+}
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}

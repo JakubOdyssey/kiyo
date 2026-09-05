@@ -1,0 +1,292 @@
+/* Responsive view */
+.view-mobile {
+  display: block;
+}
+.view-in-desktop {
+  display: none;
+}
+/* spacer */
+.spacer-small,
+.spacer-medium,
+.spacer,
+.spacer-3,
+.spacer-4 {
+  display: block;
+  width: 100%;
+}
+
+.spacer-small {
+  height: 1rem;
+}
+
+.spacer-medium {
+  height: 1.5rem;
+}
+
+.spacer {
+  height: 2rem;
+}
+.spacer-3 {
+  height: 3rem;
+}
+.spacer-4 {
+  height: 4rem;
+}
+/* Sections */
+.section-small,
+.section-medium,
+.section {
+  display: block;
+  width: 100%;
+}
+
+.section-small {
+  padding: 1rem 0;
+}
+
+.section-medium {
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 4rem 0;
+}
+.section-3 {
+  padding: 3rem 0;
+}
+.section-4 {
+  padding: 4rem 0;
+}
+.section-5 {
+  padding: 5rem 0;
+}
+/* Text Alignment */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-wrap-balance {
+  text-wrap: balance;
+}
+.text-wrap-pretty {
+  text-wrap: pretty;
+}
+/* Margin, Padding */
+.margin-0 {
+  margin: 0;
+}
+.padding-0 {
+  padding: 0;
+}
+/* Content width */
+.width-3,
+.width-4,
+.width-5,
+.width-6,
+.width-7 {
+  width: 100%;
+}
+/* List */
+.no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-check li::before {
+  content: "\e002";
+  font-family: "iconly";
+  padding-right: 0.5rem;
+}
+/* Flex properties */
+.display-flex {
+  display: flex;
+}
+
+/* color */
+.color-white {
+  color: var(--kiyo-text-primary);
+}
+.color-gradient,
+.title-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.title-gradient {
+  width: fit-content;
+}
+.section-title {
+  color: var(--kiyo-text-primary);
+  font-weight: var(--font-weight-normal);
+  width: fit-content;
+}
+
+/* typography */
+.font-size-small {
+  font-size: 0.75rem;
+}
+.font-size-normal {
+  font-size: 1rem;
+}
+
+.font-size-medium {
+  font-size: 1.25rem;
+}
+
+.font-size-large {
+  font-size: 1.5rem;
+}
+
+.font-size-x2 {
+  font-size: 2rem;
+}
+
+.font-size-x3 {
+  font-size: 3rem;
+}
+
+.font-weight-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+/* Image size */
+.image-size-x1,
+.image-size-x2,
+.image-size-x3,
+.image-size-x4 {
+  width: auto;
+}
+
+.image-size-x1 {
+  height: 1rem;
+}
+
+.image-size-x2 {
+  height: 2rem;
+}
+
+.image-size-x3 {
+  height: 3rem;
+}
+
+.image-size-x4 {
+  height: 4rem;
+}
+/* Flex Properties */
+.flex,
+.flex-container {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.flex-container {
+  flex-wrap: wrap;
+}
+.flex-dir-row {
+  flex-direction: row;
+}
+.flex-dir-column {
+  flex-direction: column;
+}
+/* Grid properties */
+.items,
+.items-3,
+.items-4 {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.items-3 {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Common Flex and Grid properties */
+.gap-small {
+  gap: 0.5rem;
+}
+.gap {
+  gap: 1rem;
+}
+.gap-medium {
+  gap: 1.5rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+
+/* line */
+.line-gradient {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+/* Marquee */
+.section-marquee {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+.marquee-item {
+  flex-shrink: 0;
+}
+.marquee-item img {
+  display: block;
+  max-width: 300px;
+  height: auto;
+}
+.marquee-rtl,
+.marquee-ltr {
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  will-change: transform;
+}
+.marquee-rtl {
+  animation: marquee-rtl 35s linear infinite;
+}
+.marquee-ltr {
+  animation: marquee-ltr 35s linear infinite;
+}
+.marquee-rtl:hover,
+.marquee-ltr:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-90%)
+  }
+}
+
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  100% {
+    transform: translateX(20%)
+  }
+}

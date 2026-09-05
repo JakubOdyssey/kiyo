@@ -1,0 +1,67 @@
+.section-hero,
+.hero-container {
+  min-height: 90vh;
+}
+.section-hero {
+  background:
+    radial-gradient(circle at 72% 48%, var(--kiyo-glow-teal-ambient), transparent 29%),
+    radial-gradient(circle at 86% 62%, var(--kiyo-glow-magenta-soft), transparent 20%),
+    var(--kiyo-bg-deep);
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0;  
+}
+.hero-section {
+  flex: 1 0 300px;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.hero-text p {
+  margin: 0;
+  text-wrap: balance;
+}
+
+.hero-title-wave {
+  background: linear-gradient(
+    90deg,
+    var(--kiyo-text-primary),
+    var(--kiyo-brand-hover),
+    var(--kiyo-accent-blue-soft),
+    var(--kiyo-text-primary)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientWave 4s linear infinite;
+}
+
+@keyframes gradientWave {
+  0% {background-position:0%}
+  100% {background-position:400%}
+}
+.hero-image {
+  animation: float 3s ease-in-out infinite alternate both;
+}
+@keyframes float {
+  0% { 
+    transform: translateY(0px);
+  }
+  50% { 
+    transform: translateY(-10px);
+
+  }
+  100% { 
+    transform: translateY(0px);
+  }
+}

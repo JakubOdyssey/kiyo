@@ -1,0 +1,30 @@
+/* Main - Page Header */
+.page-header {
+  background:
+    radial-gradient(circle at 86% 12%, var(--kiyo-glow-teal), transparent 28%),
+    var(--kiyo-bg-deep);
+  padding: 4rem 0;
+}
+.page-header .list-check li::before {
+  color: var(--color-secondary-light);
+}
+.page-header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.page-title {
+  color: var(--kiyo-text-primary);
+  width: fit-content;
+  line-height: 1.3;
+}
+/* Main - content */
+.content {
+  background: linear-gradient(180deg, var(--kiyo-bg-primary), var(--kiyo-bg-secondary) 48%, var(--kiyo-bg-primary));
+}
+
+.main-home .content-home {
+  background:
+    radial-gradient(circle at 12% 32%, var(--kiyo-glow-teal-soft), transparent 25%),
+    linear-gradient(180deg, var(--kiyo-bg-primary), var(--kiyo-bg-secondary) 50%, var(--kiyo-bg-primary));
+}

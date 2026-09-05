@@ -1,0 +1,201 @@
+.header {
+  padding: 1.5rem 0;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+/* Logo */
+.logo {
+  height: 36px;
+  width: auto;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* mobile menu */
+.mobile-menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s linear 0.5s;
+}
+.mobile-menu-icon span {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-primary);
+  transform-origin: center;
+  transition: transform 0.3s linear;
+}
+.mobile-menu-icon span:nth-child(2) {
+  background-color: var(--color-secondary);
+}
+.active-mobile-menu-icon {
+  gap: 0;
+  transition: all 0.3s linear;
+}
+.active-mobile-menu-icon span:nth-child(2) {
+  display: none;
+}
+.active-mobile-menu-icon span:first-child {
+  transform: rotate(45deg);
+}
+.active-mobile-menu-icon span:last-child {
+  transform: rotate(-45deg);
+}
+.active-mobile-menu-icon span {
+  transition: all 0.3s linear 0.5s;
+}
+/* close button */
+.mobile-menu-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 22;
+  overflow: hidden;
+  transition: all 0.3s linear 0.5s;
+}
+.active-mobile-menu .mobile-menu-close {
+  background-color: var(--color-primary-dark);
+  gap: 0;
+}
+.mobile-menu-close span {
+  background-color: var(--kiyo-text-primary);
+  width: 100%;
+  height: 1px;
+  transform-origin: center;
+  transition: transform 0.4s linear 0.5s;
+}
+.active-mobile-menu .mobile-menu-close span:first-child {
+  transform: rotate(45deg);
+}
+.active-mobile-menu .mobile-menu-close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+/* Header - main menu */
+.main-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+.level-1 {
+  position: relative;
+}
+.level-1-link {
+  color: var(--kiyo-text-primary);
+  font-weight: var(--font-weight-bold);
+}
+.main-menu-link {
+  text-decoration: none;
+  background: linear-gradient(to right, var(--color-secondary-light), var(--color-secondary-light)) no-repeat left bottom;
+  background-size: 0% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-size 0.4s ease, color 0.4s ease;
+}
+.main-menu-link:hover{
+  color: transparent;
+  background-size: 100% 100%;
+}
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--kiyo-bg-elevated);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  width: max-content;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+.sub-menu-item {
+  position: relative;
+  padding: 0 1rem;
+}
+.sub-menu-item::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, var(--color-primary-dark), var(--color-secondary-dark));
+  transition: background 0.3s ease;
+}
+.sub-menu-item:last-child::before {
+  content: none;
+}
+.sub-menu a {
+  display: block;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+.has-children .sub-menu {
+  display: block;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.4s linear;
+}
+.has-children:hover .sub-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Header button */
+.header-action {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  border-radius: 1000px;
+  padding: 2px;
+  transform-style: preserve-3d;
+  transition: all 0.3s linear;
+}
+.header-action:hover {
+  box-shadow: 0 0 6px var(--color-primary);
+}
+.header-button {
+  display: block;
+  background-color: var(--kiyo-bg-deep);
+  color: var(--kiyo-text-primary);
+  font-weight: var(--font-weight-bold);
+  transform-style: preserve-3d;
+  padding: 0.5rem 1rem;
+  border-radius: 1000px;
+  transition: color 0.3s linear;
+}
+.header-button i {
+  color: var(--color-primary);
+}
+.header-button:hover {
+  color: var(--color-secondary-light);
+}
+.header-user-button {
+  display: grid;
+  place-content: center;
+  color: var(--kiyo-text-primary);
+  width: 32px;
+  height: 32px;  
+  border-radius: 50%;
+  box-shadow:
+    0 0 4px 2px var(--color-primary),
+    0 0 6px 3px var(--color-secondary);
+}

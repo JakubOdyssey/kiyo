@@ -1,0 +1,364 @@
+.legal-page .page-header-container {
+  max-width: 780px;
+  gap: 0.85rem;
+}
+
+.legal-intro {
+  margin: 0;
+  color: var(--color-white-soft);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.legal-updated {
+  margin: 0.5rem 0 0;
+  color: var(--color-gray);
+  font-size: 0.88rem;
+}
+
+.legal-content {
+  padding: 4.5rem 0 6rem;
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 720px);
+  justify-content: center;
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.legal-toc {
+  position: sticky;
+  top: 6.5rem;
+  max-height: calc(100vh - 8rem);
+  overflow: auto;
+  padding-right: 1rem;
+}
+
+.legal-toc > p,
+.legal-toc-mobile summary {
+  color: var(--color-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-toc ol,
+.legal-toc-mobile ol {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.legal-toc li + li,
+.legal-toc-mobile li + li {
+  margin-top: 0.55rem;
+}
+
+.legal-toc a,
+.legal-toc-mobile a {
+  color: var(--color-gray);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.legal-toc a:hover,
+.legal-toc a:focus-visible,
+.legal-toc-mobile a:hover,
+.legal-toc-mobile a:focus-visible,
+.legal-document a {
+  color: var(--color-primary-light);
+}
+
+.legal-document {
+  min-width: 0;
+}
+
+.privacy-summary {
+  max-width: 940px;
+  margin: 0 auto 3.5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.privacy-summary h2 {
+  margin: 0.35rem 0 1rem;
+  color: var(--color-white);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+}
+
+.refund-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 940px;
+  margin: -1.25rem auto 3.5rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.refund-help h2 {
+  margin: 0.3rem 0;
+  color: var(--color-white);
+  font-size: 1.35rem;
+}
+
+.refund-help p {
+  margin: 0;
+  color: var(--color-gray-light);
+}
+
+.refund-help .button {
+  flex: 0 0 auto;
+}
+
+.refund-example {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.1rem 0;
+  color: var(--color-gray-light);
+}
+
+.refund-example p {
+  padding: 0.65rem 0.8rem;
+  background: color-mix(in srgb, var(--color-dark) 72%, transparent);
+  border-radius: 0.45rem;
+}
+
+.refund-example span {
+  color: var(--color-secondary-light);
+}
+
+.legal-related {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.legal-related > p {
+  margin: 0 0 0.9rem;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.legal-related > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
+}
+
+.privacy-summary ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 2rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-gray-light);
+}
+
+.privacy-data-groups > div + div,
+.privacy-purpose-list > div + div {
+  margin-top: 1.25rem;
+}
+
+.privacy-data-groups h3,
+.privacy-purpose-list h3 {
+  margin: 0 0 0.25rem;
+  color: var(--color-white-soft);
+  font-size: 0.95rem;
+}
+
+.privacy-bases {
+  margin: 1.25rem 0 0;
+}
+
+.privacy-bases > div {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 68%, transparent);
+}
+
+.privacy-bases dt {
+  color: var(--color-white-soft);
+  font-weight: 700;
+}
+
+.privacy-bases dd {
+  margin: 0;
+  color: var(--color-gray-light);
+  line-height: 1.7;
+}
+
+.legal-section ul {
+  color: var(--color-gray-light);
+  line-height: 1.75;
+}
+
+.cookie-table-wrap {
+  width: 100%;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+}
+
+.cookie-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  color: var(--color-gray-light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.cookie-table th,
+.cookie-table td {
+  padding: 0.8rem 0.7rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.cookie-table th {
+  color: var(--color-white-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cookie-table code,
+.legal-section code {
+  color: var(--color-secondary-light);
+  overflow-wrap: anywhere;
+}
+
+.legal-section {
+  scroll-margin-top: 7rem;
+  padding: 0 0 2.35rem;
+}
+
+.legal-section + .legal-section {
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 68%, transparent);
+  padding-top: 2.35rem;
+}
+
+.legal-section h2 {
+  margin: 0 0 1rem;
+  color: var(--color-white);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.35;
+}
+
+.legal-section h2 span {
+  color: var(--color-secondary-light);
+}
+
+.legal-section p,
+.legal-section address {
+  margin: 0;
+  color: var(--color-gray-light);
+  font-size: 0.98rem;
+  font-style: normal;
+  line-height: 1.85;
+}
+
+.legal-section p + p {
+  margin-top: 0.9rem;
+}
+
+.legal-section a {
+  text-underline-offset: 0.2em;
+}
+
+.legal-toc-mobile {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .legal-content {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .legal-layout {
+    display: block;
+  }
+
+  .legal-toc {
+    display: none;
+  }
+
+  .legal-toc-mobile {
+    display: block;
+    margin: 0 0 2.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .legal-toc-mobile summary {
+    cursor: pointer;
+    list-style-position: inside;
+  }
+
+  .legal-toc-mobile ol {
+    columns: 2;
+    column-gap: 2rem;
+  }
+
+  .privacy-summary {
+    margin-bottom: 2.5rem;
+  }
+
+  .refund-help {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .legal-page .page-header {
+    padding: 3rem 0;
+  }
+
+  .legal-toc-mobile ol {
+    columns: 1;
+  }
+
+  .privacy-summary ul {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-bases > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .refund-help,
+  .refund-example {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .refund-help .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .refund-example span {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .legal-section {
+    padding-bottom: 1.85rem;
+  }
+
+  .legal-section + .legal-section {
+    padding-top: 1.85rem;
+  }
+}
